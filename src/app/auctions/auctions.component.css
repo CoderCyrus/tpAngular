@@ -1,0 +1,29 @@
+body {
+    padding: 50px;
+  }
+  
+  h1{
+      color:green;
+  }
+  
+  table{
+      border: 1px solid green;
+      color:forestgreen;
+  }
+  
+  tr{
+      background-color:white;
+      color:forestgreen;
+  }
+  
+  td{
+      border:1px solid green;
+      color:forestgreen;
+  }
+  
+  th{
+      background-color:yellowgreen;
+      color:white;
+  }
+  
+  

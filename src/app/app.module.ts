@@ -3,14 +3,19 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AuctionsComponent } from './auctions/auctions.component';
+
+import { HttpClientModule } from '@angular/common/http'; // add HttpClient to the files
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AuctionsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
