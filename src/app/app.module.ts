@@ -5,12 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuctionsComponent } from './auctions/auctions.component';
 
-import { HttpClientModule } from '@angular/common/http'; // add HttpClient to the files
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    AuctionsComponent
+    AuctionsComponent,
   ],
   imports: [
     BrowserModule,

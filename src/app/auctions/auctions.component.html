@@ -8,21 +8,12 @@
         <th>Category</th>
         <th></th>
     </tr>
-    <tr>
-        <td>1</td>
-        <td>Computer</td>
-        <td>JY Martin</td>
-        <td>I sell my old computer, 3 years old</td>
-        <td></td>
-        <td style="text-align:center"><button><img src="assets/icons/delete.png" alt="delete" height="20" /></button>
-        </td>
-    </tr>
     <tr *ngFor="let auction of auctions ">
         <td>{{ auction.id }}</td>
         <td>{{ auction.title }}</td>
         <td>{{ auction.author }}</td>
         <td>{{ auction.body }}</td>
-        <td></td>
+        <td>{{auction.name}}</td>
         <td style="text-align:center"><button><img src="assets/icons/delete.png" alt="delete" height="20" /></button>
         </td>
     </tr>
@@ -31,7 +22,15 @@
         <td><input type="text" name="title" id="title" size="20" style="background-color:lightgrey;" /></td>
         <td><input type="text" name="author" id="author" size="20" style="background-color:lightgrey;" /></td>
         <td><input type="text" name="body" id="body" size="60" style="background-color:lightgrey;" /></td>
-        <td></td>
-        <td style="text-align:center"><button><img src="assets/icons/plus.png" alt="add" height="20" /></button></td>
+        <td><select name = "category" id = "category">
+            <option value = "-1">-</option>
+            <option *ngFor = "let category of categories" value="{{category.id}}">{{category.name}}</option>
+        </select>
+        </td>
+        <td style="text-align:center">
+            <button (click)= "onSave($event)">
+                <img src="assets/icons/plus.png" alt="add" height="20" />
+            </button>
+        </td>
     </tr>
 </table>
